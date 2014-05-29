@@ -4,7 +4,6 @@
 	get/2, 
 	instance/8, 
 	instance/9, 
-	is_url_within_mask/2,
 	to_string/1
 ]).
 
@@ -41,7 +40,7 @@ instance(PrincipalId, FriendlyName, TagRecords, RequireMessageTypeWithSubscripti
   instance(PrincipalId, FriendlyName, TagRecords, RequireMessageTypeWithSubscription, Secret, DateCreated, undefined, Realm, DeliveryUrlMask).
 
 instance(PrincipalId, FriendlyName, TagRecords, RequireMessageTypeWithSubscription, Secret, DateCreated, DateDeactivated, Realm, DeliveryUrlMask) ->
-  #ecp_principal.
+  #ecp_principal{
     id=PrincipalId, 
     friendly_name=FriendlyName, 
     enforced_tag_ids=TagRecords, 

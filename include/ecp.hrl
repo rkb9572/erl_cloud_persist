@@ -1,10 +1,10 @@
--record(pe_principal, {id, friendly_name, enforced_tag_ids=[], is_require_message_type_with_new_subs=false, date_created, date_deactivated, secret, realm="*", delivery_url_mask="*"}).
+-record(ecp_principal, {id, friendly_name, enforced_tag_ids=[], is_require_message_type_with_new_subs=false, date_created, date_deactivated, secret, realm="*", delivery_url_mask="*"}).
 
--record(pe_sub, {id, principal_id, callback_url, wsdl_uri, queue_name, tag_ids=[], date_created, date_cancelled, duplication_key}).
+-record(ecp_sub, {id, principal_id, callback_url, wsdl_uri, queue_name, tag_ids=[], date_created, date_cancelled, duplication_key}).
 
--record(pe_tag, {id, type, value}). %% Note:  Changing fields here means you have to also update the object queries in pe_tag_store.erl.
+-record(ecp_tag, {id, type, value}). %% Note:  Changing fields here means you have to also update the object queries in pe_tag_store.erl.
 
--record(pe_kvpair, {key, value}).
+-record(ecp_kvpair, {key, value}).
 
 -record(message_key, {client, clientString, messageType, system, subSystem}).
 

@@ -23,7 +23,7 @@ start_application([]) ->
   ok.
   
 get_apps_to_start() ->
-  [crypto, asn1, inets, ibrowse].
+  [crypto, asn1, inets, erlcql].
 
 start(_Type, _StartArgs) ->
   case start_application( get_apps_to_start() ) of

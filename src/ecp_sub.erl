@@ -95,7 +95,7 @@ instance(Id, PrincipalId, CallbackUrl, WsdlUri, QueueName, TagIds, DateCreated, 
   instance(Id, PrincipalId, CallbackUrl, WsdlUri, QueueName, TagIds, DateCreated, undefined, DuplicationKey).
   
 instance(Id, PrincipalId, CallbackUrl, WsdlUri, QueueName, TagIds, DateCreated, DateCancelled, DuplicationKey) ->
-  #ecp_sub.
+  #ecp_sub{
     id=Id, 
     principal_id=PrincipalId, 
     callback_url=CallbackUrl,

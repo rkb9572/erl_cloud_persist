@@ -35,6 +35,5 @@ init([]) ->
 	%% between the children, it is correct to start any gen_servers dependent
 	%% on a failed gen_server.
 	%%
-  	{ok, {{rest_for_one, 0,1}, [SubStore, PrincipalStore, 
-								SubIntake, PrincipalIntake]}}.  module(ecp_sup).
+  	{ok, {{rest_for_one, 0,1}, [SubStore, PrincipalStore, SubIntake, PrincipalIntake]}}.
 

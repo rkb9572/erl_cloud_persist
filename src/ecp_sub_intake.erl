@@ -93,10 +93,6 @@ handle_call({new, CallbackIn, Tags, PrincipalId, WsdlUriIn}, _From, _State) ->
           case ecp_sub_store:find_by_duplication_key(DupeKey) of
             [] ->
               {created, Subscription} = ecp_sub_store:create_new(ecp_sub:instance(undefined, PrincipalId, Callback, WsdlUri, undefined, TagIds, undefined, DupeKey)),
-              
-              Tmp2 = ecp_tag_util:make_tag_audit_log_tags(TagRecords),
-              Tmp3 = [{sub,ecp_sub:get(id, Subscription)},{callback_url,Callback},{wsdl_uri,WsdlUri},{principal, PrincipalId}],
-              
               {ok,Subscription};
             [DupedSub] ->
               {invalid_request, {duplicate_subscription, ecp_sub:get(id, DupedSub)}};
@@ -162,4 +158,4 @@ handle_info(_Msg, State) ->
 
 
 terminate(_Reason, _State) -> ok.
-
+code_change(_OldVersion, State, _Extra) -> {ok, State}.

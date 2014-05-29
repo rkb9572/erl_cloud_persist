@@ -140,10 +140,10 @@ handle_call({cancel, Subscription}, _From, State) ->
  
 handle_cast(_Msg, State) -> {noreply, State}.
 
-handle_info({mnesia_table_event, {delete, {ecp_sub, SubId}, _ActivityId}}, State) ->
+handle_info({mnesia_table_event, {delete, {ecp_sub, _SubId}, _ActivityId}}, State) ->
   {noreply, State};
 
-handle_info({mnesia_table_event, {write, Subscription, _ActivityId}}, State) ->
+handle_info({mnesia_table_event, {write, _Subscription, _ActivityId}}, State) ->
   {noreply, State};
 
 handle_info(_Msg, State) ->
