@@ -1,0 +1,10 @@
+127.0.0.1
+10.200.1.200  cassandra.node0
+10.200.1.201  cassandra.node1
+10.200.1.202  cassandra.node2
+10.200.1.203  cassandra.node3
+10.200.1.204  cassandra.node4
+10.200.1.205  cassandra.node5
+10.200.1.206  cassandra.node6
+10.200.1.207  cassandra.node7
+10.200.1.208  cassandra.node8

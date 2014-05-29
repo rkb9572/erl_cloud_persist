@@ -1,0 +1,13 @@
+{application, ecp,
+ [
+  {description, "A POC for testing various cloud persistence models for erlang"},
+  {vsn, "0.0.1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { pe_app, []}},
+  {env, []}
+ ]}.
